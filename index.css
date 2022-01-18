@@ -1,0 +1,69 @@
+/* To center all elements */
+body {
+    text-align: center;
+  }
+  /* Giving a hack byincluding the back image of clock on this element */
+  #clockContainer{
+      background: url(/assets/clock.jpg) no-repeat;
+      width: 30vw;
+      height: 30vw;
+      background-size: 100%;
+      margin: auto;
+  }
+  #digitalClock{
+      margin-top: 20px;
+  }
+  /* Style for buttons so that they look responsive on all screens */
+  #mybuttons{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  /* The dialer styles are here  */
+  #second{
+      position: relative;
+      background-color: black;
+      border-radius: 10px;
+      width: 0.2%;
+      height: 25%;
+      top:25%;
+      left:50%;
+      transform-origin: bottom;
+  }
+  /* 3 buttons styles are here */
+  #start,#stop,#clear {
+    /* margin: 40px auto; */
+    text-align: center;
+    color: #DAD6D6;
+    background: #007bff;;
+    border:solid 2px #007bff;;
+    border-radius:5px;
+    padding:16px 40px 16px;
+    letter-spacing: 2px;
+    cursor:pointer;
+  }
+  /* initially stop and pause buttons are set to not visible then will control via javascript */
+  #clear,#stop{
+      display: none;
+  }
+  #start,#stop,#clear{
+      margin: 10px;
+  }
+
+  h2
+  {
+    font-size: 46px;
+    letter-spacing: 2px;
+    margin: 200px 0 0 ;
+  }
+  /* Making the things responsive */
+  @media (min-width: 200px) and (max-width: 1000px) { 
+    #clockContainer{
+        width: 90vw;
+        height: 90vw;
+    }
+    #start,#stop,#clear,#lap{
+    padding: 10px;
+
+    }
+   }
